@@ -8,10 +8,10 @@ if (process.env.NODE_ENV === "development") {
 
 $(".right-arrow").on("click", function () {
   let imgs = [
-    "images/service-1.png",
-    "images/service-2.png",
-    "images/service-3.png",
-    "images/service-4.png",
+    "images/webp/service-1.webp",
+    "images/webp/service-2.webp",
+    "images/webp/service-3.webp",
+    "images/webp/service-4.webp",
   ];
   let big = $(".services__big-slider img");
   let index = imgs.indexOf($(big).attr("src"));

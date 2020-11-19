@@ -92,56 +92,56 @@ const plugins = () => {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "src/images/about-us-img.png"),
-          to: path.resolve(__dirname, "dist/images"),
+          from: path.resolve(__dirname, "src/images/webp/about-us-img.webp"),
+          to: path.resolve(__dirname, "dist/images/webp"),
         },
         {
           from: path.resolve(__dirname, "src/images/Arrow_icon.png"),
           to: path.resolve(__dirname, "dist/images"),
         },
         {
-          from: path.resolve(__dirname, "src/images/banner-img.png"),
-          to: path.resolve(__dirname, "dist/images"),
+          from: path.resolve(__dirname, "src/images/webp/banner-img.webp"),
+          to: path.resolve(__dirname, "dist/images/webp"),
         },
         {
-          from: path.resolve(__dirname, "src/images/blog-1.png"),
-          to: path.resolve(__dirname, "dist/images"),
+          from: path.resolve(__dirname, "src/images/webp/blog-1.webp"),
+          to: path.resolve(__dirname, "dist/images/webp"),
         },
         {
-          from: path.resolve(__dirname, "src/images/blog-2.png"),
-          to: path.resolve(__dirname, "dist/images"),
+          from: path.resolve(__dirname, "src/images/webp/blog-2.webp"),
+          to: path.resolve(__dirname, "dist/images/webp"),
         },
         {
-          from: path.resolve(__dirname, "src/images/blog-3.png"),
-          to: path.resolve(__dirname, "dist/images"),
+          from: path.resolve(__dirname, "src/images/webp/blog-3.webp"),
+          to: path.resolve(__dirname, "dist/images/webp"),
         },
         {
-          from: path.resolve(__dirname, "src/images/client-1.png"),
-          to: path.resolve(__dirname, "dist/images"),
+          from: path.resolve(__dirname, "src/images/webp/client-1.webp"),
+          to: path.resolve(__dirname, "dist/images/webp"),
         },
         {
-          from: path.resolve(__dirname, "src/images/client-2.png"),
-          to: path.resolve(__dirname, "dist/images"),
+          from: path.resolve(__dirname, "src/images/webp/client-2.webp"),
+          to: path.resolve(__dirname, "dist/images/webp"),
         },
         {
-          from: path.resolve(__dirname, "src/images/client-3.png"),
-          to: path.resolve(__dirname, "dist/images"),
+          from: path.resolve(__dirname, "src/images/webp/client-3.webp"),
+          to: path.resolve(__dirname, "dist/images/webp"),
         },
         {
-          from: path.resolve(__dirname, "src/images/service-1.png"),
-          to: path.resolve(__dirname, "dist/images"),
+          from: path.resolve(__dirname, "src/images/webp/service-1.webp"),
+          to: path.resolve(__dirname, "dist/images/webp"),
         },
         {
-          from: path.resolve(__dirname, "src/images/service-2.png"),
-          to: path.resolve(__dirname, "dist/images"),
+          from: path.resolve(__dirname, "src/images/webp/service-2.webp"),
+          to: path.resolve(__dirname, "dist/images/webp"),
         },
         {
-          from: path.resolve(__dirname, "src/images/service-3.png"),
-          to: path.resolve(__dirname, "dist/images"),
+          from: path.resolve(__dirname, "src/images/webp/service-3.webp"),
+          to: path.resolve(__dirname, "dist/images/webp"),
         },
         {
-          from: path.resolve(__dirname, "src/images/service-4.png"),
-          to: path.resolve(__dirname, "dist/images"),
+          from: path.resolve(__dirname, "src/images/webp/service-4.webp"),
+          to: path.resolve(__dirname, "dist/images/webp"),
         },
         {
           from: path.resolve(__dirname, "src/images/studio_logo.png"),
@@ -153,6 +153,14 @@ const plugins = () => {
         },
         {
           from: path.resolve(__dirname, "src/images/sprite.svg"),
+          to: path.resolve(__dirname, "dist/images"),
+        },
+        {
+          from: path.resolve(__dirname, "src/images/sprite.svg"),
+          to: path.resolve(__dirname, "dist/images"),
+        },
+        {
+          from: path.resolve(__dirname, "src/images/icons/location.svg"),
           to: path.resolve(__dirname, "dist/images"),
         },
       ],
@@ -202,6 +210,10 @@ module.exports = {
       {
         test: /\.(png|jpg|svg|gif)$/,
         use: ["file-loader"],
+      },
+      {
+        test: /\.(webp)$/,
+        use: ["webp-loader", "file-loader"],
       },
       {
         test: /\.(ttf|woff|woff2|eot)$/,

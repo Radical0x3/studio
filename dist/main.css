@@ -151,7 +151,7 @@ body {
   .header__banner {
     max-width: 100%;
     height: auto;
-    background-image: url(709290bc7baa7da825c25b3d9f16c020.png);
+    background-image: url(9b3e49c3159763e663e3f6504e2cba57.webp);
     background-size: cover;
     text-shadow: 0 0 45px rgba(0, 0, 0, 0.05);
     color: #fff;
@@ -724,7 +724,20 @@ body {
     .footer__address span {
       margin-bottom: 35px; }
     .footer__address-item {
+      display: flex;
+      align-items: center;
       margin-bottom: 20px; }
+      .footer__address-item:first-child::before {
+        background-image: url(bca3164452b59a1767878cc9a278f655.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        stroke: #fff; }
+      .footer__address-item::before {
+        content: "";
+        display: block;
+        width: 18px;
+        height: 18px;
+        margin-right: 15px; }
   .footer__contact-item {
     font-size: 30px; }
     .footer__contact-item:nth-child(1) {
